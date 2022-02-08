@@ -1,0 +1,75 @@
+/* кольори:
+основний текст #757575
+/* активний колір: #2196F3; */
+:root {
+  --color_primary: #757575;
+  --color-active: #2196f3;
+  --color-header: #212121;
+}
+
+/* 
+в Футері
+Web #2196F3 Studio #FFFFFF
+адреса #FFFFFF
+
+пошта і телефон rgba(255, 255, 255, 0,6)
+*/
+
+body {
+  color: var(--color-primary);
+  font-family: roboto, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+/* Header */
+/* WebStudio */
+.logo {
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--color-active);
+}
+.logo-header {
+  color: #000000;
+}
+/* header-nav */
+.nav-list {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  list-style: none;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--color-header);
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--color-active);
+}
+/* header-contacts */
+.header-contacts {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  list-style: none;
+}
+.contacts-link {
+  text-decoration: none;
+  color: var(--color_primary);
+}
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--color-active);
+}
+
+/* Fotter */
+.logo-footer {
+  color: #ffffff;
+}
