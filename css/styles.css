@@ -2,27 +2,28 @@
 основний текст #757575
 /* активний колір: #2196F3; */
 :root {
-  --color_primary: #757575;
+  /* основний колір тексту */
+  --color-primary: #757575;
+  /* колір активних посилань і кнопок */
   --color-active: #2196f3;
-  --color-header: #212121;
+  /* колір навігації і заголовків */
+  --color-header-nav: #212121;
+
+  --color-white: #ffffff;
 }
-
-/* 
-в Футері
-Web #2196F3 Studio #FFFFFF
-адреса #FFFFFF
-
-пошта і телефон rgba(255, 255, 255, 0,6)
-*/
 
 body {
   color: var(--color-primary);
   font-family: roboto, sans-serif;
   font-size: 14px;
+  font-weight: 400;
   letter-spacing: 0.03em;
 }
-
+.list {
+  list-style: none;
+}
 /* Header */
+
 /* WebStudio */
 .logo {
   text-decoration: none;
@@ -32,6 +33,7 @@ body {
   line-height: 1.2;
   color: var(--color-active);
 }
+
 .logo-header {
   color: #000000;
 }
@@ -41,12 +43,10 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
-  list-style: none;
 }
 .nav-link {
   text-decoration: none;
-  color: var(--color-header);
+  color: var(--color-header-nav);
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -69,7 +69,71 @@ body {
   color: var(--color-active);
 }
 
+/* main */
+/* hero */
+.hero {
+  background-color: #2f303a;
+  letter-spacing: 0.06em;
+}
+.hero-text {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.35;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--color-white);
+}
+.hero-button {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.85;
+
+  cursor: pointer;
+
+  background-color: var(--color-active);
+  color: var(--color-white);
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #188ce8;
+}
+
+/* section Features */
+
+.features-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+
+  text-transform: uppercase;
+}
+
+.features-text {
+  line-height: 1.7;
+}
+
 /* Fotter */
+.footer {
+  background-color: #2f303a;
+}
+
 .logo-footer {
   color: #ffffff;
+}
+
+.footer-text {
+  font-style: normal;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+.footer-contacts {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-contacts:hover {
+  color: var(--color-active);
 }
