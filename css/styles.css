@@ -6,17 +6,19 @@
   --color-primary: #757575;
   /* колір активних посилань і кнопок */
   --color-active: #2196f3;
-  /* колір навігації і заголовків */
+  /* колір тексту навігації і заголовків */
   --color-title-nav: #212121;
 
   --color-white: #ffffff;
+  /* другий колір логотипу в хедері */
+  --color-logo-secondary: #000000;
 
   /* колір пошти і номера телефону в футері*/
   --color-footer-contacts: rgba(255, 255, 255, 0.6);
   /* колір hover кнопки */
   --color-btn-hover: #188ce8;
   /* фон кнопок портфоліо */
-  --bgcolor-portfolio-button: F5F4FA;
+  --bgcolor-portfolio-button: #f5f4fa;
 }
 
 body {
@@ -30,11 +32,13 @@ body {
 .list {
   list-style: none;
 }
+.link {
+  text-decoration: none;
+}
 /* Header */
 
 /* WebStudio */
 .logo {
-  text-decoration: none;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -43,17 +47,15 @@ body {
 }
 
 .logo-header {
-  color: #000000;
+  color: var(--color-logo-secondary);
 }
 /* header-nav */
 .nav-list {
-  font-family: inherit;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 .nav-link {
-  text-decoration: none;
   color: var(--color-title-nav);
 }
 .nav-link:hover,
@@ -62,14 +64,12 @@ body {
 }
 /* header-contacts */
 .header-contacts {
-  font-family: inherit;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
 }
 .contacts-link {
-  text-decoration: none;
   color: var(--color_primary);
 }
 .contacts-link:hover,
@@ -161,7 +161,6 @@ body {
 }
 
 .footer-contacts {
-  text-decoration: none;
   color: var(--color-footer-contacts);
 }
 
