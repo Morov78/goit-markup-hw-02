@@ -7,9 +7,16 @@
   /* колір активних посилань і кнопок */
   --color-active: #2196f3;
   /* колір навігації і заголовків */
-  --color-header-nav: #212121;
+  --color-title-nav: #212121;
 
   --color-white: #ffffff;
+
+  /* колір пошти і номера телефону в футері*/
+  --color-footer-contacts: rgba(255, 255, 255, 0.6);
+  /* колір hover кнопки */
+  --color-btn-hover: #188ce8;
+  /* фон кнопок портфоліо */
+  --bgcolor-portfolio-button: F5F4FA;
 }
 
 body {
@@ -19,6 +26,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.03em;
 }
+/* прибирання маркерів в списках */
 .list {
   list-style: none;
 }
@@ -46,7 +54,7 @@ body {
 }
 .nav-link {
   text-decoration: none;
-  color: var(--color-header-nav);
+  color: var(--color-title-nav);
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -97,7 +105,7 @@ body {
 }
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #188ce8;
+  background-color: var(--color-btn-hover);
 }
 
 /* section Features */
@@ -114,26 +122,83 @@ body {
   line-height: 1.7;
 }
 
+/* section Servises */
+.section-title {
+  text-align: center;
+
+  font-size: 36px;
+  line-height: 1.17;
+
+  color: var(--color-title-nav);
+}
+/* section team */
+.team-list {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team-item-title {
+  font-size: 16px;
+
+  font-weight: 500;
+
+  color: var(--color-title-nav);
+}
+
 /* Fotter */
 .footer {
   background-color: #2f303a;
 }
 
 .logo-footer {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .footer-text {
   font-style: normal;
   line-height: 1.7;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .footer-contacts {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-footer-contacts);
 }
 
 .footer-contacts:hover {
   color: var(--color-active);
+}
+
+/* portfolio */
+/* кнопки */
+.portfolio-button {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.85;
+
+  cursor: pointer;
+
+  background-color: var(--bgcolor-portfolio-button);
+  color: var(--color-title-nav);
+}
+.portfolio-button:hover,
+.portfolio-button:focus {
+  background-color: var(--color-btn-hover);
+  color: var(--color-white);
+}
+/* галерея */
+.gallery-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--color-title-nav);
+}
+.gallery-text {
+  font-size: 16px;
+  line-height: 1.87;
+
+  color: var(--color-primary);
 }
