@@ -222,7 +222,7 @@ body {
 
   cursor: pointer;
 
-  background-color: var(--bgcolor-portfolio-button);
+  background-color: var(--bgc-portfolio-button);
   color: var(--color-portfolio-button);
 }
 .gallery-button:hover,
