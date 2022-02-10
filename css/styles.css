@@ -1,29 +1,57 @@
-/* кольори:
-основний текст #757575
-/* активний колір: #2196F3; */
 :root {
+  /* основний шрифт */
+  --primary-font: roboto, sans-serif;
+  /* шрифт для лого */
+  --logo-font: Raleway, sans-serif;
+  /* секція з темним фоном */
+  /* фон */
+  --bgc-dark: #2f303a;
   /* основний колір тексту */
-  --color-primary: #757575;
-  /* колір активних посилань і кнопок */
-  --color-active: #2196f3;
+  --color-primary-dark: #ffffff;
+  /* колір пошти і номера телефону в футері*/
+  --color-footer-contacts: rgba(255, 255, 255, 0.6);
+
+  /* cекція з світлим фоном */
+  /* основний фон */
+  --bcg-light: #ffffff;
+  /* основний колір тексту */
+  --color-primary-light: #757575;
+
+  /* секція Наша команда, фон */
+  --bcg-team: #f5f4fa;
+
+  /* Лого WebStudio */
+  /* перший колір тексту в логотипі */
+  --color-logo-primary: #2196f3;
+  /* другий колір тексту логотипу в хедері */
+  --color-logo-header-secondary: #000000;
+  /* другий колір тексту логотипу в футері */
+  --color-logo-footer-secondary: #ffffff;
+
   /* колір тексту навігації і заголовків */
   --color-title-nav: #212121;
 
-  --color-white: #ffffff;
-  /* другий колір логотипу в хедері */
-  --color-logo-secondary: #000000;
+  /* колір активності посилань */
+  --color-nav-active: #2196f3;
 
-  /* колір пошти і номера телефону в футері*/
-  --color-footer-contacts: rgba(255, 255, 255, 0.6);
-  /* колір hover кнопки */
-  --color-btn-hover: #188ce8;
-  /* фон кнопок портфоліо */
-  --bgcolor-portfolio-button: #f5f4fa;
+  /* кнопка Hero */
+  --bcg-button-primary: #2196f3;
+  --color-button: #ffffff;
+  /* фон hover кнопки */
+  --bcg-button-hover: #188ce8;
+
+  /* кнопка портфоліо */
+  --bgc-portfolio-button: #f5f4fa;
+  --color-portfolio-button: #212121;
+  /* кнопка портфоліо в ховері */
+  --bgc-portfolio-button-hover: #2196f3;
+  --color-portfolio-button-hover: #ffffff;
 }
-
+/* основні властивості body */
 body {
-  color: var(--color-primary);
-  font-family: roboto, sans-serif;
+  background-color: var(--bcg-light);
+  color: var(--color-primary-light);
+  font-family: var(--primary-font);
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.03em;
@@ -32,6 +60,7 @@ body {
 .list {
   list-style: none;
 }
+/* прибирання підкреслення в посиланнях */
 .link {
   text-decoration: none;
 }
@@ -39,28 +68,28 @@ body {
 
 /* WebStudio */
 .logo {
-  font-family: Raleway, sans-serif;
+  font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  color: var(--color-active);
+  color: var(--color-logo-primary);
 }
 
 .logo-header {
-  color: var(--color-logo-secondary);
+  color: var(--color-logo-header-secondary);
 }
 /* header-nav */
-.nav-list {
+.header-nav-list {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.nav-link {
+.header-nav-link {
   color: var(--color-title-nav);
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--color-active);
+.header-nav-link:hover,
+.header-nav-link:focus {
+  color: var(--color-nav-active);
 }
 /* header-contacts */
 .header-contacts {
@@ -69,48 +98,58 @@ body {
   letter-spacing: 0.02em;
   list-style: none;
 }
-.contacts-link {
-  color: var(--color_primary);
+.header-contacts-link {
+  color: inherit;
 }
-.contacts-link:hover,
-.contacts-link:focus {
-  color: var(--color-active);
+.header-contacts-link:hover,
+.header-contacts-link:focus {
+  color: var(--color-nav-active);
 }
 
 /* main */
 /* hero */
 .hero {
-  background-color: #2f303a;
+  background-color: var(--bgc-dark);
   letter-spacing: 0.06em;
 }
-.hero-text {
+.hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.35;
   text-align: center;
   text-transform: uppercase;
 
-  color: var(--color-white);
+  color: var(--color-primary-dark);
 }
 .hero-button {
-  font-family: Roboto, sans-serif;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.85;
 
   cursor: pointer;
 
-  background-color: var(--color-active);
-  color: var(--color-white);
+  background-color: var(--bcg-button-primary);
+  color: var(--color-button);
 }
 .hero-button:hover,
 .hero-button:focus {
-  background-color: var(--color-btn-hover);
+  background-color: var(--bcg-button-hover);
 }
 
 /* section Features */
+.invisible-txt {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
-.features-title {
+.features-list-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -118,12 +157,12 @@ body {
   text-transform: uppercase;
 }
 
-.features-text {
+.features-list-txt {
   line-height: 1.7;
 }
 
 /* section Servises */
-.section-title {
+.title {
   text-align: center;
 
   font-size: 36px;
@@ -132,13 +171,17 @@ body {
   color: var(--color-title-nav);
 }
 /* section team */
-.team-list {
+.team {
+  background-color: var(--bcg-team);
+}
+.team-item {
+  background-color: #ffffff;
   font-size: 16px;
   line-height: 1.19;
 }
 
 .team-item-title {
-  font-size: 16px;
+  font-size: inherit;
 
   font-weight: 500;
 
@@ -147,17 +190,17 @@ body {
 
 /* Fotter */
 .footer {
-  background-color: #2f303a;
+  background-color: var(--bgc-dark);
 }
 
 .logo-footer {
-  color: var(--color-white);
+  color: var(--color-logo-footer-secondary);
 }
 
 .footer-text {
   font-style: normal;
   line-height: 1.7;
-  color: var(--color-white);
+  color: var(--color-primary-dark);
 }
 
 .footer-contacts {
@@ -166,13 +209,13 @@ body {
 
 .footer-contacts:hover,
 .footer-contacts:focus {
-  color: var(--color-active);
+  color: var(--color-nav-active);
 }
 
 /* portfolio */
 /* кнопки */
-.portfolio-button {
-  font-family: Roboto, sans-serif;
+.gallery-button {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.85;
@@ -180,15 +223,16 @@ body {
   cursor: pointer;
 
   background-color: var(--bgcolor-portfolio-button);
-  color: var(--color-title-nav);
+  color: var(--color-portfolio-button);
 }
-.portfolio-button:hover,
-.portfolio-button:focus {
-  background-color: var(--color-btn-hover);
-  color: var(--color-white);
+.gallery-button:hover,
+.gallery-button:focus {
+  background-color: var(--bgc-portfolio-button-hover);
+  color: var(--color-portfolio-button-hover);
 }
 /* галерея */
-.gallery-title {
+
+.gallery-card-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -196,9 +240,20 @@ body {
 
   color: var(--color-title-nav);
 }
-.gallery-text {
+.gallery-card-text {
   font-size: 16px;
   line-height: 1.87;
-
-  color: var(--color-primary);
+}
+/* робить елемент невидимим */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
